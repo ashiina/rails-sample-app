@@ -122,6 +122,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
+    spring (1.1.3)
+    spring-commands-rspec (1.0.2)
+      spring (>= 0.9.1)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -159,6 +162,7 @@ DEPENDENCIES
   io-console
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  minitest
   pg (= 0.15.1)
   rails (= 4.1.6)
   rails_12factor (= 0.0.2)
@@ -166,6 +170,7 @@ DEPENDENCIES
   sass-rails (= 4.0.2)
   sdoc (= 0.3.20)
   selenium-webdriver (= 2.35.1)
+  spring-commands-rspec
   sprockets (= 2.11.0)
   sqlite3 (= 1.3.8)
   therubyracer

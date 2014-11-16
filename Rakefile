@@ -3,4 +3,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+# for making spec work on rails4.1
+task 'test:prepare'
+
 Rails.application.load_tasks

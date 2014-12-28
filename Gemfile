@@ -10,7 +10,8 @@ gem 'bcrypt-ruby', '3.1.2'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
+#  gem 'rspec-rails', '2.13.1'
+  gem "rspec-rails", '~> 2.14.0.rc1'
   gem 'spring-commands-rspec'
 #  gem 'guard-rspec'
   gem 'minitest'

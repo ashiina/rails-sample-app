@@ -1,0 +1,48 @@
+
+<h1>
+hello test
+</h1>
+
+<div id="player"></div>
+
+<script src="//www.youtube.com/player_api"></script>
+<script type="text/javascript">
+
+var videoList = [
+'NCFg7G63KgI', 'lTTajzrSkCw', 'SuHmEo0Bx7Q', '9ZE2ampxGzU', 'HMVahbqhmGw', 'cWukYnVLM4w', '_S8fEF5dlHE'
+];
+
+    var player;
+    function onYouTubePlayerAPIReady() {
+        var videoId = videoList.pop();
+        console.log("playin: "+videoId);
+        player = new YT.Player('player', {
+          height: '600',
+          width: '100%',
+          videoId: videoId,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // when video ends
+    function onPlayerStateChange(event) {        
+        if(event.data === 0) {           
+          document.getElementById("player").innerHTML = "boo!";
+          player.loadVideoById(videoList.pop());
+        }
+    }
+
+function popFromVideoList () {
+  return videoList.pop();
+}
+
+</script>
+
